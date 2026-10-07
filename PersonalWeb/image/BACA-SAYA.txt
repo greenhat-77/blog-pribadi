@@ -1,0 +1,4 @@
+Taruh semua foto/video di folder ini. Nama file yang dipakai website:
+Bagus.jpg, Villa.png, Jogja.jpg, Background.jpg
+project-noele.jpg, project-crepes.jpg, project-nescafe.jpg (poster video), nescafe.mp4
+PDF portofolio: simpan sebagai portofolio.pdf di folder utama (sejajar dengan index.html).

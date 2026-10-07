@@ -1,0 +1,18 @@
+/* Gaya halaman Contact */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.contact-photo{aspect-ratio:4/3;border-radius:20px;margin:28px 0}
+.contact-links{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.contact-links a{display:flex;justify-content:space-between;color:var(--text);text-decoration:none;padding:14px 18px;border:1px solid var(--line);border-radius:14px;transition:border-color .2s,background .2s}
+.contact-links a:hover{border-color:var(--peri);background:var(--card)}
+.contact-links span{color:var(--muted)}
+.contact-form-card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:36px}
+.contact-form-card h2{margin-bottom:24px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:.88rem;font-weight:600;margin-bottom:6px}
+.field input,.field textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font:inherit;font-size:.95rem;background:rgba(9,21,64,.7);color:var(--text);transition:border-color .15s,box-shadow .15s}
+.field input::placeholder,.field textarea::placeholder{color:rgba(171,210,250,.45)}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--peri);box-shadow:0 0 0 3px rgba(118,146,255,.25)}
+.field textarea{min-height:120px;resize:vertical}
+.send-btn{width:100%}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
+@media(max-width:480px){.contact-form-card{padding:24px}}

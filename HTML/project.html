@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IamBugass_ | Project</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   IamBugass_ — Personal Profile Website
+   ========================================================= */
+
+:root{
+  --bg: #F5F6FA;
+  --surface: #FFFFFF;
+  --ink: #1C1B2E;
+  --ink-soft: #5B5A72;
+  --violet: #6E62E5;
+  --violet-soft: #A99CF0;
+  --blue: #6FB1E8;
+  --blue-soft: #BFDDF3;
+  --pink: #F0A3C8;
+  --line: #E3E4EF;
+
+  --font-display: "Space Grotesk", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+
+  --nav-height: 76px;
+  --container: 1100px;
+}
+
+*, *::before, *::after{ box-sizing: border-box; }
+
+html{ scroll-behavior: smooth; }
+
+body{
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img{ max-width: 100%; display: block; }
+
+.wrap{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ---------- Navigation ---------- */
+.site-nav{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-nav .wrap{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.nav-links{
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a{
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 0.98rem;
+  font-weight: 500;
+  padding-bottom: 6px;
+  border-bottom: 2px solid transparent;
+  transition: color .15s ease, border-color .15s ease;
+}
+
+.nav-links a:hover{ color: var(--ink); }
+
+.nav-links a.is-active{
+  color: var(--violet);
+  border-bottom-color: var(--violet);
+}
+
+/* ---------- Generic section spacing ---------- */
+section{ padding: 88px 0; }
+section.tight{ padding: 56px 0; }
+
+.eyebrow-free-heading{
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 20px;
+}
+
+h1{ font-size: 2.6rem; }
+h2{ font-size: 1.9rem; }
+h3{ font-size: 1.3rem; }
+
+p{ color: var(--ink-soft); margin: 0 0 16px; max-width: 62ch; }
+
+/* ---------- Photo boxes ---------- */
+.photo-box{
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-align: center;
+  padding: 12px;
+}
+
+.photo-box--violet{ background: var(--violet); }
+.photo-box--blue{ background: var(--blue); }
+
+.photo-img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.photo-stack{
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 3 / 4;
+}
+
+.photo-stack .photo-box{
+  position: absolute;
+  width: 76%;
+  aspect-ratio: 3 / 4;
+  border-radius: 4px;
+}
+
+.photo-stack--home .photo-box--blue{ top: 0; right: 0; z-index: 1; }
+.photo-stack--home .photo-box--violet{ bottom: 0; left: 0; z-index: 2; }
+
+.photo-stack--alt .photo-box--violet{ top: 0; left: 0; z-index: 1; }
+.photo-stack--alt .photo-box--blue{ bottom: 0; right: 0; z-index: 2; }
+
+
+.side-photo{
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+}
+
+/* ---------- Layout helpers ---------- */
+.two-col{
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.three-col{
+  display: grid;
+  grid-template-columns: 220px 1fr 220px;
+  gap: 40px;
+  align-items: stretch;
+}
+
+@media (max-width: 860px){
+  .two-col, .three-col{ grid-template-columns: 1fr; }
+  .photo-stack{ margin: 0 auto; }
+}
+
+/* ---------- Footer ---------- */
+.site-footer{
+  border-top: 1px solid var(--line);
+  padding: 28px 0;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+</style>
+<style>
+  /* Gaya khusus untuk timeline project */
+  .timeline-cols{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-top: 12px;
+  }
+  .timeline-year{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+  }
+  .timeline-dot{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--pink);
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .timeline-item{
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+  .timeline-item p{ margin: 0; max-width: 100%; }
+  @media (max-width: 860px){
+    .timeline-cols{ grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="site-nav">
+    <div class="wrap">
+      <a href="index.html" class="logo">IamBugass_</a>
+      <ul class="nav-links">
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="project.html" class="is-active">Project</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============ PROJECT TIMELINE ============ -->
+  <section class="tight">
+    <div class="wrap three-col">
+
+      <!-- FOTO -->
+      <div class="photo-box photo-box--blue side-photo">
+        <span>Foto</span>
+        <img class="photo-img" src="image/Background.jpg" alt="Foto" onerror="this.style.display='none'">
+      </div>
+
+      <div>
+        <!-- TEKS -->
+        <h1 class="eyebrow-free-heading" style="text-align:center;">Project</h1>
+
+        <div class="timeline-cols">
+
+          <!-- TEKS PROYEK -->
+          <div>
+            <div class="timeline-year"><span class="timeline-dot"></span>2025</div>
+
+            <div class="timeline-item">
+              <p>Projek logo NOELE 2025</p>
+            </div>
+            <div class="timeline-item">
+              <p>Projek logo CREPES 2025</p>
+            </div>
+            <div class="timeline-item">
+              <p>Video iklan NESCAFE 2025</p>
+            </div>
+          </div>
+
+          <!-- TEKS PROYEK -->
+          <div>
+            <div class="timeline-year"><span class="timeline-dot"></span>2026</div>
+
+            <div class="timeline-item">
+              <p>Website personal 2026</p>
+            </div>
+            <div class="timeline-item">
+              <p>                                 </p>
+            </div>
+            <div class="timeline-item">
+              <p>                                  </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- FOTO -->
+      <div class="photo-box photo-box--blue side-photo">
+        <span>Foto</span>
+        <img class="photo-img" src="image/Background.jpg" alt="Foto" onerror="this.style.display='none'">
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <!-- TEKS -->
+    &copy; 2026 IamBugass_. All rights reserved.
+  </footer>
+
+</body>
+</html>

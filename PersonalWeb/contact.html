@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IamBugass_ | Contact</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="wrap">
+      <a href="index.html" class="logo">IamBugass_</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html" class="is-active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section>
+    <div class="wrap contact-grid">
+      <div>
+        <!--TEKS-->
+        <h1>Talk to Me :v</h1>
+        <p>Punya pertanyaan, pesan, atau ingin berteman? Isi form di samping. Terima kasih sudah mampir!</p>
+
+        <!--FOTO-->
+        <div class="photo contact-photo">
+          <span>Foto</span>
+          <img src="image/Jogja.jpg" alt="Foto" onerror="this.style.display='none'">
+        </div>
+
+        <!--LINK KONTAK-->
+        <ul class="contact-links">
+          <li><a href="mailto:bagussumomihardjo@gmail.com">Email <span>bagussumomihardjo@gmail.com</span></a></li>
+          <li><a href="https://instagram.com/mhmdbaguus_" target="_blank" rel="noopener">Instagram <span>@mhmdbaguus_</span></a></li>
+          <li><a href="https://github.com/greenhat-77" target="_blank" rel="noopener">GitHub <span>greenhat-77</span></a></li>
+        </ul>
+      </div>
+
+      <!--FORM-->
+      <form class="contact-form-card" onsubmit="return false;">
+        <h2>Send a Message</h2>
+        <div class="field"><label for="name">Name</label><input type="text" id="name" name="name" placeholder="Your name"></div>
+        <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="you@email.com"></div>
+        <div class="field"><label for="subject">Subject</label><input type="text" id="subject" name="subject" placeholder="Subject"></div>
+        <div class="field"><label for="message">Comment or Message</label><textarea id="message" name="message" placeholder="Write your message here..."></textarea></div>
+        <button type="submit" class="btn btn--solid send-btn">Send message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <!--TEKS-->
+    &copy; 2026 IamBugass_. All rights reserved.
+  </footer>
+
+</body>
+</html>
